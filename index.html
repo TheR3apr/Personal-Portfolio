@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Bogdan Stojiljkovic">
+  <title>Personal Portfolio 2</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Rosarivo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/slideshow.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/skills.css">
+</head>
+
+<body>
+
+  <!-- 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">
+-->
+        <!--<img src="http://gdurl.com/4Q15" alt="logo" >-->
+<!--
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+-->
+<script id="entry-template" type="text/x-handlebars-template">
+  <a href={{url}} target='_blank'>
+    <div class='polaroid'>
+      <div class='img'>
+        <img src={{pic}} class='thumbnail img-responsive image' alt='A sample of one of my projects' title='A sample of one of my projects'>
+        <div class='overlay'>
+          <div class='text'>Check it out!</div>
+        </div>
+      </div class='container'>
+        <p class='fm'>{{description}}</p>
+      <div>
+      </div>
+    </div>
+  </a>
+</script>
+<aside>
+  <div id="case3">
+    <a href="#menu" class="menu-button"><i class="fa fa-bars" aria-hidden="true" onclick="app.controller.menuButton()"></i></a>
+  </div>
+  <nav id="menu">
+    <ul class="sidenav">
+      <li><a id="topbut" href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li>
+        <p class="caption text-center" id="footer">Written and coded by Bogdan Stojiljkovic</p>
+      </li>
+    </ul>
+  </nav>  
+</aside>
+
+<div class="slideshow-cont" >
+  <div>
+    <img class="slideshow img-responsive animation" src="http://gdurl.com/sXCPE" id="pic01" style="width:100%">
+  </div>
+  <div>
+    <img class="slideshow img-responsive animation" src="http://gdurl.com/xGfg" id="pic02">
+  </div>
+  <div>
+    <img class="slideshow img-responsive animation" src="http://gdurl.com/Owuk" id="pic03">
+  </div>
+  <a id="prev" onclick="app.controller.moveSlides(-1)">&#10094;</a>
+  <a id="next" onclick="app.controller.moveSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center" id="navDots">
+  <span class="dot" id="dot01" onclick="app.controller.currentSlide(1)"></span> 
+  <span class="dot" id="dot02" onclick="app.controller.currentSlide(2)"></span> 
+  <span class="dot" id="dot03" onclick="app.controller.currentSlide(3)"></span> 
+</div>
+
+  <div id="about" class="container-fluid row section">
+    <h1>About me</h1>
+    <div class="divider-big"></div>
+    <div class="col-sm-4 col-md-4 col-xs-6">
+      <img id="picOfMe"  src="http://gdurl.com/5cmI" alt="A picture of me looking bored" title="A picture of me looking bored">
+      <p id="beg" class="sum">Name: Bogdan Stojiljkovic</p>
+      <div class="divider-small"></div>
+      <p class="sum">Nationality: Serbian</p>
+      <div class="divider-small"></div>
+      <p class="sum">E-mail: ther3apr@gmail.com</p>
+      <div class="divider-small"></div>
+    </div>
+    <div class="col-sm-8 col-md-8 col-xs-6">
+        <blockquotes>
+          <p>“Work hard, and you will earn good rewards. Work smart, and you will earn great rewards. Work hard and work smart, and you will earn extraordinary rewards.” 
+   </p>
+          <footer><p><cite>Matshona Dhliwayo</cite></p></footer>
+        </blockquotes>
+        <div class="divider-small"></div>
+        <h3>A bit about me</h3>
+        <div class="divider-small"></div>
+        <p id="me">I'm an aspiring Front-End Developer starting out my career. My passion is creating usefull and intuitive software, accesable to everyone. I'm willing to learn and put an effort toward accomplishing any goal.</p>
+    </div>
+  </div>
+  <div id="portfolio" class="container-fluid section">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h1>My portfolio</h1>
+        <div class="divider-big"></div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="dropdown">
+          <button class="dropbtn">Filter <span class="caret"></span></button>
+          <div class="dropdown-content">
+            <a href="#" onclick="app.controller.filterButton(0)">All</a>
+            <a href="#" onclick="app.controller.filterButton(1)">Personal projectss</a>
+            <a href="#" onclick="app.controller.filterButton(2)">Open-source</a>
+            <a href="#" onclick="app.controller.filterButton(3)">Previous work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="the-stuff"></div>>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-4" id="col1"></div>
+      <div class="col-md-4 col-sm-4 col-xs-4" id="col2"></div>
+      <div class="col-md-4 col-sm-4 col-xs-4" id="col3"></div>
+    </div>
+    <div id="more">
+      <a id="prev2" class="more" onclick="app.controller.changePopulation(0)"><p>Prev</p></a>
+      <a id="next2" class="more" onclick="app.controller.changePopulation(1)"><p>Next</p></a>
+    </div>
+  </div>
+  <div id="skills" class="container-fluid row section">
+    <h1>My skills</h1>
+    <div class="divider-big"></div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <h3>Some of my prior education</h3>
+      <ul type="disc" id="listOfEd">
+        <li>Front-end course on Free Code Camp</li>
+        <li>Practical JS course by Gordon Zhu</li>
+        <li>"You don't know JS" books by Kyle Simpson</li>
+        <li>Currently studying computer science in University</li>
+        <a href="https://www.freecodecamp.org/ther3apr/front-end-certification" target="_blank"><img id="certificate" src="http://gdurl.com/NSGN"></a>
+      </ul>
+    </div>
+    <div id="extraDivider" class="divider-small"></div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <h3>My current skill set</h3>
+      <ul type="square" id="listOfSkills">
+        <li>HTML5, CSS3, Bootstrap</li>
+        <li>JQuery, ES6</li>
+        <li>SASS</li>
+        <li>Redux</li>
+        <li>Proficient in Cross-browser optimization</li>
+      </ul>
+      <a id="download" href="http://gdurl.com/JbEn" target="_blank">Download CV</a>
+    </div>
+  </div>
+  <!--<div id="contact" class="container-fluid row section"></div>-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {margin: 0;}
+/*General section settings*/
+.section {
+  display: block;
+  font-family: 'Yeseva One', cursive;
+  margin: 0px !important;
+  position: relative;
+  left: 130px;
+  bottom: 32px;
+  width: calc(100% - 130px);
+  color: #a3a3a3;
+  padding: 60px 40px 60px 40px;
+}
+.section h1, .section  h3{
+  color: #dd1d00;
+  
+}
+.section h1 {
+  margin: 40px;
+  font-size: 330%;
+}
+
+.col-xs-6 p, .col-md-4 p, .col-md-8 p, .col-sm-4 p, .col-sm-8 p {
+  font-size: 160%;
+  margin-left: 30px;
+  color: #474747;
+}
+@media screen and (max-width: 1000px) {
+  .section {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .section {
+    left: 0px;
+    width: 100%;
+  }
+}
